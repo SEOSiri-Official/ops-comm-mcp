@@ -1,0 +1,40 @@
+[project]
+name = "seosiri-ops-comm-mcp"
+version = "1.0.0"
+description = "A sovereign, local-first MCP server for enterprise incident response, Sentry error triage, Linear issue sync, and Slack operational alerting."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "SEOSiri-Official", email = "info@seosiri.com" }
+]
+license = "MIT"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: System :: Monitoring",
+    "Topic :: Security"
+]
+dependencies = [
+    "mcp>=1.0.0",
+    "requests>=2.28.0",
+    "fastapi>=0.110.0",
+    "uvicorn>=0.31.1"
+]
+
+[project.urls]
+Homepage = "https://www.seosiri.com/2026/08/ops-comm-mcp.html"
+Documentation = "https://www.seosiri.com/2026/07/seosiri-mcp-servers.html"
+Repository = "https://github.com/SEOSiri-Official/ops-comm-mcp.git"
+
+[build-system]
+requires = ["setuptools>=77.0.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["src"]
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "ignore::PendingDeprecationWarning",
+    "ignore::DeprecationWarning"
+]
